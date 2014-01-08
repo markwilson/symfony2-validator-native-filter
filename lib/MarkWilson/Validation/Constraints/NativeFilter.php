@@ -32,12 +32,6 @@ class NativeFilter extends Constraint
      */
     public function __construct($options = null)
     {
-        if (isset($options['filter'])) {
-            $this->filter = $options['filter'];
-
-            unset($options['filter']);
-        }
-
         parent::__construct($options);
 
         if (!is_int($this->filter)) {
